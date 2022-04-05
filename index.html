@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<title>Spongebob Quote Machine</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section>
+<h1 id="qtext">Welcome to the Spongebob Quote Machine. Click the button to get a direct quote from the show!</h1>
+<button id = "newquote">New Spongebob Quote</button>
+<img alt="Spongebob smiling" src="Spongebob.png">
+</section>
+
+
+
+<script>
+  const quotes = ["I'm ready, I'm ready.", "The best time to wear a striped sweater is all the time.", "F is for friends who do stuff together!","Ravioli, ravioli. Give me the formuoli.", "I wumbo, you wumbo, he she we wumbo.", "2000 years lsta - Narrator"];
+  let quotecount = 0;
+  document.getElementById("newquote").addEventListener("click", buttonClicked);
+  function buttonClicked(){
+    console.log(quotes[quotecount]);
+    document.getElementById("qtext").innerHTML = quotes[quotecount];
+     if(quotecount>=5){
+       quotecount =0;
+       }else{
+      quotecount ++;
+      }
+      }
+</script>
+</body>
+
+</html>
